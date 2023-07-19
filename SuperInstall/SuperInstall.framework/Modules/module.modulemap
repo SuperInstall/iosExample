@@ -1,0 +1,6 @@
+framework module SuperInstall {
+  umbrella header "SuperInstall.h"
+
+  export *
+  module * { export * }
+}

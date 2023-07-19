@@ -26,7 +26,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [ViewController new];
     [self.window makeKeyAndVisible];
-    [SuperInstall init:@"cxka6g" withSecret:@"123456"];
+    [SuperInstall init:@"cym56m" withSecret:@"cef8a903df3170937d642f1c1958f3aa"];
+    [SuperInstall getInstall:^(NSString * _Nonnull channel, NSDictionary * _Nullable data) {
+        NSLog(@"params is %@",data);
+    }];
+    NSLog(@"init key cym56m");
     
     return YES;
 }

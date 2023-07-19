@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42FEFCFE28E4E16C00D8B199 /* OPInstall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FEFCFD28E4E16C00D8B199 /* OPInstall.framework */; };
-		42FEFCFF28E4E16C00D8B199 /* OPInstall.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42FEFCFD28E4E16C00D8B199 /* OPInstall.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		42B285472A4D7B0700E4FE10 /* SuperInstall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B285452A4D7A9500E4FE10 /* SuperInstall.framework */; };
+		42B285482A4D7B0700E4FE10 /* SuperInstall.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42B285452A4D7A9500E4FE10 /* SuperInstall.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E728AA4B25889C5800868588 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E728AA4A25889C5800868588 /* AppDelegate.m */; };
 		E728AA5125889C5800868588 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E728AA5025889C5800868588 /* ViewController.m */; };
 		E728AA5625889C5900868588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E728AA5525889C5900868588 /* Assets.xcassets */; };
@@ -42,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				42FEFCFF28E4E16C00D8B199 /* OPInstall.framework in Embed Frameworks */,
+				42B285482A4D7B0700E4FE10 /* SuperInstall.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		42FEFCFD28E4E16C00D8B199 /* OPInstall.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OPInstall.framework; path = "../../Library/Developer/Xcode/DerivedData/OPInstall-fvpbvhtnmobzmaeducdvytoeuxdr/Build/Products/Release-iphoneos/OPInstall.framework"; sourceTree = "<group>"; };
+		42B285452A4D7A9500E4FE10 /* SuperInstall.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SuperInstall.framework; path = "../../Library/Developer/Xcode/DerivedData/SuperInstall-foukhxmenbbquihggzkuigidtbhi/Build/Products/Release-iphoneos/SuperInstall.framework"; sourceTree = "<group>"; };
 		E728AA4625889C5800868588 /* SuperInstallExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperInstallExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E728AA4925889C5800868588 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E728AA4A25889C5800868588 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42FEFCFE28E4E16C00D8B199 /* OPInstall.framework in Frameworks */,
+				42B285472A4D7B0700E4FE10 /* SuperInstall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 		429286D128634E7200EB3EC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42FEFCFD28E4E16C00D8B199 /* OPInstall.framework */,
+				42B285452A4D7A9500E4FE10 /* SuperInstall.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -451,13 +451,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
 				CODE_SIGN_ENTITLEMENTS = SuperInstall/SuperInstall.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T44JB3T792;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jamesyan/Library/Developer/Xcode/DerivedData/OPInstall-fvpbvhtnmobzmaeducdvytoeuxdr/Build/Products/Release-iphoneos",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -471,8 +474,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.op.op;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.op.op1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -482,13 +487,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
 				CODE_SIGN_ENTITLEMENTS = SuperInstall/SuperInstall.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T44JB3T792;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jamesyan/Library/Developer/Xcode/DerivedData/OPInstall-fvpbvhtnmobzmaeducdvytoeuxdr/Build/Products/Release-iphoneos",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -502,8 +510,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.op.op;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.op.op1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -512,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TinstallTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
@@ -531,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TinstallTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
